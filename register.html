@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive form</title>
+    <link rel="stylesheet" href="./register.css">   
+</head>
+<body>
+    <div class="container">
+        <div class="reg">RESPONSIVE  REGISTRATION FORM</div>
+        <div class="formContainer">
+            <!--userDetails-->
+
+                   <div class="inputName"><input type="email" id="email" placeholder="Email" onkeyup="valids()" class="textName"><img src="assets/mail.png" alt=""><span id="emailvalid"></span></div>
+                   <div class="inputPassword"  ><input type="password" id="password" placeholder="Password" onkeyup="passwords()"  class="textName"  ><img src="./assets/password.png" alt=""><span id="pswrd"></span>
+                         <span><img  class="eye" src="assets/eye.png" onclick="eyehide()"></span><span class="tooltiptext">Password must contain 8 charset one each (UPPER,lower,symbol)</span></div>
+                              
+                   <div class="inputName"><input type="password" id="confirmPassword" placeholder="Confirm Password" onkeyup="compare()" class="textName"><img src="assets/password.png" alt=""><span id="repswrd"></span> <span><img  class="eye" src="assets/eye.png" onclick="hide()"></span></div>
+
+
+                 <div class="names">
+                    <img src="assets/person.png" > <input type="text" id="userFname" placeholder="Firstname" onkeyup="Fname()" class="name"><span id="validn"></span>
+                    <img src="assets/person.png" class="imgLast" ><input type="text"  id="userSname"  placeholder="Lastname" onkeyup="Lname()" class="name" > <span id="validL"></span></div>
+                
+            
+            <!--radiobuttons-->
+            <div class="inputRadio">
+                <label><input type="radio" class="radio-button" name="radiogrp" >Male</label>
+                <label><input type="radio" class="radio-button" name="radiogrp" >Female</label>
+            </div>
+
+            <!--dropdown-->
+            <div class="inputOptions">
+                  <div class="custom"> <select >
+                    <option value="0">Select a Course</option>
+                    <option value="1">Java</option>
+                    <option value="2">C++</option>
+                    <option value="3">Python</option></select></div> 
+
+                   <div class="arrow"></div></div>
+
+            <!--checkbox-->
+            <span class="check">
+                <label><input type="checkbox"  name="check" class="check">I agree with terms and conditions</label>
+                 <label><input type="checkbox" class="check" name="check" >I want to receive newsletter</label>
+                </span>
+       
+            <div class="inputButton"> <input type="submit" class="button" value="Register"  onclick="redirect()"  ></div>
+            
+            <script src="register.js"></script>
+        </div>
+</body>
+</html>
